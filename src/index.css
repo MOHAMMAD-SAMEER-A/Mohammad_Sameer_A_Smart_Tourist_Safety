@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom CSS Keyframe Animations for Cyber-Glows */
+@keyframes neon-pulse-emerald {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.25), inset 0 0 4px rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.5), inset 0 0 8px rgba(16, 185, 129, 0.25);
+    border-color: rgba(16, 185, 129, 0.45);
+  }
+}
+
+@keyframes neon-pulse-crimson {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.25), inset 0 0 4px rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.65), inset 0 0 10px rgba(239, 68, 68, 0.35);
+    border-color: rgba(239, 68, 68, 0.6);
+  }
+}
+
+@keyframes neon-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.2), inset 0 0 4px rgba(34, 211, 238, 0.1);
+    border-color: rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.55), inset 0 0 8px rgba(34, 211, 238, 0.3);
+    border-color: rgba(34, 211, 238, 0.5);
+  }
+}
+
+@keyframes neon-pulse-indigo {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.2), inset 0 0 4px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.55), inset 0 0 8px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+}
+
+.shadow-neon-emerald {
+  animation: neon-pulse-emerald 2.5s infinite ease-in-out;
+}
+
+.shadow-neon-crimson {
+  animation: neon-pulse-crimson 2s infinite ease-in-out;
+}
+
+.shadow-neon-glow {
+  animation: neon-pulse-glow 3s infinite ease-in-out;
+}
+
+.shadow-neon-indigo {
+  animation: neon-pulse-indigo 3s infinite ease-in-out;
+}
